@@ -9,5 +9,5 @@ if (slides.length > 1) {
     currentSlide = (currentSlide + 1) % slides.length;
 
     slides[currentSlide].classList.add("active");
-  }, 1500);
+  }, 2000);
 }
