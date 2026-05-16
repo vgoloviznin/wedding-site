@@ -1,7 +1,13 @@
-// window.addEventListener("scroll", () => {
-//   const heroImage = document.querySelector(".hero__image");
+const slides = document.querySelectorAll(".location-gallery img");
 
-//   const offset = window.scrollY * 0.15;
+let currentSlide = 0;
 
-//   heroImage.style.transform = `scale(1.03) translateY(${offset}px)`;
-// });
+if (slides.length > 1) {
+  setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+  }, 4500);
+}

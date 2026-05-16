@@ -481,3 +481,113 @@ p {
     height: 1100px
   }
 }
+
+.location-gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  background: var(--paper);
+  aspect-ratio: 4/3
+}
+
+.location-gallery img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.02);
+  transition:
+    opacity 1.2s ease,
+    transform 6s ease
+}
+
+.location-gallery img.active {
+  opacity: 1;
+  transform: scale(1)
+}
+
+.atmosphere {
+  position: relative;
+  padding: 0;
+  overflow: hidden
+}
+
+.atmosphere img {
+  width: 100%;
+  height: 82vh;
+  object-fit: cover;
+  display: block
+}
+
+.atmosphere:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,
+      rgba(0, 0, 0, .38),
+      rgba(0, 0, 0, .06))
+}
+
+.atmosphere-text {
+  position: absolute;
+  left: 8vw;
+  bottom: 7vw;
+  z-index: 2;
+  max-width: 520px
+}
+
+.atmosphere-text p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: .98;
+  letter-spacing: -.03em;
+  color: white
+}
+
+.timeline-list {
+  margin-top: 28px
+}
+
+.timeline-item {
+  padding: 10px 0;
+  border: 0
+}
+
+.timeline-item p {
+  font-size: 18px;
+  color: #4d4942
+}
+
+@media(max-width:900px) {
+
+  .atmosphere img {
+    height: 64vh
+  }
+
+  .atmosphere-text {
+    left: 24px;
+    right: 24px;
+    bottom: 32px;
+    max-width: none
+  }
+
+  .atmosphere-text p {
+    font-size: 42px
+  }
+
+  .location-gallery {
+    border-radius: 22px
+  }
+
+}
+
+@media(max-width:520px) {
+
+  .location-gallery {
+    border-radius: 20px
+  }
+
+}
