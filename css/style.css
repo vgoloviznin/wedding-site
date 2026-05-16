@@ -162,14 +162,14 @@ p {
   justify-content: center;
   min-height: 52px;
   padding: 0 30px;
-  border: 1px solid rgba(255, 255, 255, .48);
+  border: 1px solid rgba(255, 255, 255, .22);
   border-radius: 999px;
   color: #fff;
   text-decoration: none;
   font-size: 13px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, .05);
+  background: rgba(255, 255, 255, .12);
   backdrop-filter: blur(6px);
   transition: .28s ease
 }
@@ -187,7 +187,7 @@ p {
 
 .invitation .narrow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .95fr .8fr;
   gap: 76px;
   align-items: start
 }
@@ -359,7 +359,7 @@ p {
     height: 72svh;
     min-height: 620px;
     max-height: none;
-    padding: 46px 24px;
+    padding: 110px 40px 56px;
     align-items: flex-start
   }
 
